@@ -1,8 +1,8 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore/lite';
-import { getAnalytics } from 'firebase/analytics';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.0.1/firebase-analytics.js';
 
-const firebaseConfig = {
+const firebaseApp = initializeApp({
   apiKey: 'AIzaSyDtxfkSilyWrtkCI9FnYbmWVTvMtpqpRiY',
   authDomain: 'fir-firestore-intro-aafa2.firebaseapp.com',
   projectId: 'fir-firestore-intro-aafa2',
@@ -10,12 +10,12 @@ const firebaseConfig = {
   messagingSenderId: '206417463819',
   appId: '1:206417463819:web:4c493e582e14168283150e',
   measurementId: 'G-3E4Y0N2QT3',
-};
+});
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseConfig);
-const analytics = getAnalytics(app);
+const app = initializeApp(firebaseApp);
+const db = getFirestore(firebaseApp);
+const analytics = getAnalytics(firebaseApp);
 
 const list = document.querySelector('ul');
 const form = document.querySelector('form');
